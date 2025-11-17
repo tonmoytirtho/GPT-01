@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZESS TYRE | JK-Inspired Hybrid Homepage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- 1. Mega Header -->
+    <header>
+      <div class="top-bar">
+        <div class="container">
+          <div class="top-links">
+            <a href="#solutions">For Business</a>
+            <a href="#support">Support</a>
+            <a href="#dealer">Dealer Portal</a>
+          </div>
+          <div class="top-actions">
+            <a href="#dealer">Contact Us</a>
+            <span aria-label="phone">📞 0800-000-000</span>
+            <a href="#">EN | BN</a>
+          </div>
+        </div>
+      </div>
+      <div class="main-nav">
+        <div class="container nav-inner">
+          <div class="logo">ZESS TYRE</div>
+          <nav>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#hero">Find Your Tyre</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#solutions">Solutions</a></li>
+              <li><a href="#quality">Quality &amp; Manufacturing</a></li>
+              <li><a href="#dealer">Dealer Network</a></li>
+              <li><a href="#support">Support</a></li>
+              <li><a href="#company">Company</a></li>
+            </ul>
+          </nav>
+          <div class="nav-actions">
+            <button class="icon-btn" aria-label="Search">🔍</button>
+            <button class="btn btn-primary">Enquire Now</button>
+            <button class="btn btn-secondary">Find a Dealer</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. Hero Section with Tyre Finder -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Tyres Engineered for Bangladesh Roads.</h1>
+          <p>Motorcycle, 3-Wheeler, EV, LCV, and Farm/Tiller tyres crafted for endurance, safety, and trusted performance. Inner tubes and allied products built for every journey.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary">Enquire Now</button>
+            <button class="btn btn-secondary">Explore Products</button>
+          </div>
+          <div class="chips">
+            <span class="chip">Motorcycle</span>
+            <span class="chip">3-Wheeler &amp; EV</span>
+            <span class="chip">LCV</span>
+            <span class="chip">Farm/Tiller</span>
+            <span class="chip">Inner Tubes</span>
+            <span class="chip">Allied Products</span>
+          </div>
+        </div>
+        <div class="finder-card" aria-label="Tyre Finder">
+          <div class="finder-header">
+            <h3>Tyre Finder</h3>
+            <div class="tabs" role="tablist">
+              <button class="tab active" data-target="vehicle" role="tab" aria-selected="true">By Vehicle</button>
+              <button class="tab" data-target="size" role="tab" aria-selected="false">By Size</button>
+            </div>
+          </div>
+          <form id="finder-vehicle" class="finder-form active">
+            <div class="grid single-col">
+              <div class="field">
+                <label for="vehicle">Vehicle Type</label>
+                <select id="vehicle" name="vehicle">
+                  <option>Motorcycle</option>
+                  <option>3-Wheeler</option>
+                  <option>EV</option>
+                  <option>LCV</option>
+                  <option>Farm/Tiller</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="position">Tyre Position</label>
+                <select id="position" name="position">
+                  <option>Front</option>
+                  <option>Rear</option>
+                  <option>All</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="size">Tyre Size</label>
+                <select id="size" name="size">
+                  <option>80/100-17</option>
+                  <option>90/90-17</option>
+                  <option>120/80-18</option>
+                  <option>4.00-8</option>
+                  <option>145/80 R12</option>
+                </select>
+              </div>
+              <button class="btn btn-primary full" type="submit">Search Tyres</button>
+            </div>
+          </form>
+          <form id="finder-size" class="finder-form">
+            <div class="grid single-col">
+              <div class="field">
+                <label for="width">Section Width (mm)</label>
+                <input id="width" name="width" type="number" inputmode="numeric" placeholder="e.g., 90" />
+              </div>
+              <div class="field">
+                <label for="aspect">Aspect Ratio (%)</label>
+                <input id="aspect" name="aspect" type="number" inputmode="numeric" placeholder="e.g., 90" />
+              </div>
+              <div class="field">
+                <label for="rim">Rim Size (inches)</label>
+                <input id="rim" name="rim" type="number" inputmode="numeric" placeholder="e.g., 17" />
+              </div>
+              <button class="btn btn-primary full" type="submit">Search Tyres</button>
+            </div>
+          </form>
+          <div class="finder-result" aria-live="polite">Select options to see tailored tyre suggestions.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Browse by Vehicle -->
+    <section class="section light" id="browse">
+      <div class="container">
+        <div class="section-title">
+          <h2>Browse by Vehicle</h2>
+        </div>
+        <div class="vehicle-slider">
+          <div class="vehicle-track">
+            <div class="tile">
+              <img src="https://source.unsplash.com/600x400/?motorcycle%20tire%20closeup" alt="Motorcycle tire closeup" />
+              <div>
+                <h3>Motorcycle</h3>
+                <a class="link-arrow" href="#">View Tyres →</a>
+              </div>
+            </div>
+            <div class="tile">
+              <img src="https://source.unsplash.com/600x400/?three%20wheeler%20tire" alt="Three wheeler tire" />
+              <div>
+                <h3>3-Wheeler</h3>
+                <a class="link-arrow" href="#">View Tyres →</a>
+              </div>
+            </div>
+            <div class="tile">
+              <img src="https://source.unsplash.com/600x400/?e%20rickshaw%20tire" alt="E rickshaw tire" />
+              <div>
+                <h3>EV (E-Rickshaw)</h3>
+                <a class="link-arrow" href="#">View Tyres →</a>
+              </div>
+            </div>
+            <div class="tile">
+              <img src="https://source.unsplash.com/600x400/?light%20truck%20tire%20closeup" alt="Light truck tire closeup" />
+              <div>
+                <h3>LCV</h3>
+                <a class="link-arrow" href="#">View Tyres →</a>
+              </div>
+            </div>
+            <div class="tile">
+              <img src="https://source.unsplash.com/600x400/?agriculture%20tiller%20tire" alt="Agriculture tiller tire" />
+              <div>
+                <h3>Farm/Tiller</h3>
+                <a class="link-arrow" href="#">View Tyres →</a>
+              </div>
+            </div>
+            <div class="tile">
+              <img src="https://source.unsplash.com/600x400/?inner%20tube%20rubber" alt="Inner tube rubber" />
+              <div>
+                <h3>Inner Tubes &amp; HCV/LTB</h3>
+                <a class="link-arrow" href="#">View Tyres →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Our Product Range -->
+    <section class="section mid" id="products">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Product Range</h2>
+        </div>
+        <div class="grid cards-7">
+          <div class="card">
+            <img src="https://source.unsplash.com/640x480/?motorcycle%20tire%20closeup" alt="Motorcycle tyre" />
+            <h3>Motorcycle Tyres</h3>
+            <p>Durable tread engineered for city agility and highway stability.</p>
+            <a class="link" href="#">Explore →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x480/?three%20wheeler%20tire" alt="3-Wheeler tyre" />
+            <h3>3-Wheeler Tyres</h3>
+            <p>High-load radials tuned for rickshaw traction and mileage.</p>
+            <a class="link" href="#">Explore →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x480/?e%20rickshaw%20tire" alt="EV tyre" />
+            <h3>EV Tyres (E-Rickshaw)</h3>
+            <p>Low rolling resistance compounds for efficient EV fleets.</p>
+            <a class="link" href="#">Explore →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x480/?light%20truck%20tire%20closeup" alt="LCV tyre" />
+            <h3>LCV Tyres</h3>
+            <p>Reinforced casings built to carry heavier commercial loads.</p>
+            <a class="link" href="#">Explore →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x480/?agriculture%20tiller%20tire" alt="Farm tiller tyre" />
+            <h3>Farm/Tiller Tyres</h3>
+            <p>Lug patterns for field traction with dependable puncture resistance.</p>
+            <a class="link" href="#">Explore →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x480/?inner%20tube%20rubber" alt="Inner tube rubber" />
+            <h3>Inner Tubes (incl. HCV/LTB)</h3>
+            <p>Reliable air retention and resilience across tube sizes.</p>
+            <a class="link" href="#">Explore →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x480/?tire%20workshop" alt="Allied products" />
+            <h3>Allied Products</h3>
+            <p>PCT, bonding gum, flaps, and sole sheets for complete service.</p>
+            <a class="link" href="#">Explore →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Shop by Application -->
+    <section class="section" id="application">
+      <div class="container">
+        <div class="section-title">
+          <h2>Shop by Application</h2>
+        </div>
+        <div class="grid cards-4">
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?motorcycle%20tire%20closeup" alt="Daily commute tyre" />
+            <h3>Daily Commute</h3>
+            <p>Comfortable grip and confident braking for everyday riders.</p>
+            <a class="link" href="#">Explore →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?light%20truck%20tire%20closeup" alt="Commercial load tyre" />
+            <h3>Commercial Load</h3>
+            <p>Load-ready casings designed for continuous delivery duty.</p>
+            <a class="link" href="#">Explore →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?tire%20workshop" alt="Rough terrain tyre" />
+            <h3>Rough Terrain</h3>
+            <p>Aggressive tread blocks to handle mud, gravel, and ruts.</p>
+            <a class="link" href="#">Explore →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?tire%20warehouse%20stacks" alt="High mileage tyre" />
+            <h3>High Mileage</h3>
+            <p>Long-wear compounds that stretch every kilometer further.</p>
+            <a class="link" href="#">Explore →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Solutions for Business Partners -->
+    <section class="section" id="solutions">
+      <div class="container">
+        <div class="section-title">
+          <h2>Solutions for Business Partners</h2>
+        </div>
+        <div class="grid cards-4">
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?tire%20warehouse%20stacks" alt="Tire warehouse stacks" />
+            <h3>Fleets &amp; Commercial</h3>
+            <p>Optimize uptime with high-mileage tyres and dedicated support.</p>
+            <button class="btn btn-primary">Learn More</button>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?tire%20workshop" alt="Tire workshop" />
+            <h3>Dealers</h3>
+            <p>Stock fast-moving SKUs with marketing and training assistance.</p>
+            <button class="btn btn-primary">Learn More</button>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?tire%20warehouse%20stacks" alt="Distributor pallets" />
+            <h3>Distributors &amp; Export</h3>
+            <p>Nationwide fulfillment with reliable logistics and credit lines.</p>
+            <button class="btn btn-primary">Learn More</button>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?tire%20production%20line" alt="Tire production line" />
+            <h3>OEM Partnerships</h3>
+            <p>Collaborative development tailored to OE performance targets.</p>
+            <button class="btn btn-primary">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Dealer Network & Partner Section -->
+    <section class="section mid" id="dealer">
+      <div class="container">
+        <div class="section-title">
+          <h2>Dealer Network &amp; Partnerships</h2>
+        </div>
+        <div class="row-two">
+          <div class="card locator-card">
+            <div class="locator-bg"></div>
+            <div class="locator-overlay">
+              <div>
+                <h3>Find Your Nearest ZESS Dealer</h3>
+                <p>Search authorized dealers across Bangladesh.</p>
+              </div>
+              <div>
+                <button class="btn btn-primary">Open Dealer Locator</button>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="min-height: 320px;">
+            <h3>Become a Dealer</h3>
+            <ul class="benefits">
+              <li>Priority supply of fast-moving patterns</li>
+              <li>Trade marketing and signage support</li>
+              <li>Training on fitment and care</li>
+              <li>Attractive margins for growth</li>
+            </ul>
+            <button class="btn btn-primary" style="margin-top: auto; width: fit-content;">Become a Dealer</button>
+          </div>
+        </div>
+        <div class="stats-line">5000+ Dealers | 1000+ Distributors | Nationwide Coverage</div>
+      </div>
+    </section>
+
+    <!-- 8. Support & Resources -->
+    <section class="section" id="support">
+      <div class="container">
+        <div class="section-title">
+          <h2>Support &amp; Resources</h2>
+          <p class="subdued">Guides and tools to keep every ZESS tyre performing at its best.</p>
+        </div>
+        <div class="grid cards-5">
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?tire%20inspection" alt="Tire inspection" />
+            <h3>Tyre Care &amp; Safety</h3>
+            <p>Maintenance tips for safer, longer-lasting journeys.</p>
+            <a class="link" href="#">View →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?tire%20fitting%20mechanic" alt="Tire fitting mechanic" />
+            <h3>Fitment &amp; Rotation</h3>
+            <p>Rotation schedules and expert installation practices.</p>
+            <a class="link" href="#">View →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?motorcycle%20tire%20closeup" alt="Tyre texture" />
+            <h3>FAQs</h3>
+            <p>Answers to common tyre, tube, and warranty questions.</p>
+            <a class="link" href="#">View →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?tire%20testing%20lab" alt="Tire testing lab" />
+            <h3>Warranty &amp; Claims</h3>
+            <p>Coverage terms and claim process guidance.</p>
+            <a class="link" href="#">View →</a>
+          </div>
+          <div class="card">
+            <img src="https://source.unsplash.com/640x420/?tire%20warehouse%20stacks" alt="Download centre" />
+            <h3>Download Centre</h3>
+            <p>Catalogues, spec sheets, and fitment references.</p>
+            <a class="link" href="#">View →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Quality & Manufacturing Excellence -->
+    <section class="section quality" id="quality">
+      <div class="angled-accent"></div>
+      <div class="container content">
+        <div>
+          <img class="thumb" src="https://source.unsplash.com/1200x800/?tire%20testing%20lab" alt="Tire production line" />
+        </div>
+        <div>
+          <h2>Quality &amp; Manufacturing Excellence</h2>
+          <p class="quality-copy">Advanced compounding, precision curing, and rigorous lab testing deliver consistent performance in Bangladesh heat, rain, and load conditions. Every batch is validated for endurance, grip, and safety before reaching the road.</p>
+          <div class="feature-chips">
+            <span class="feature-chip">R&amp;D</span>
+            <span class="feature-chip">Testing</span>
+            <span class="feature-chip">Certifications</span>
+            <span class="feature-chip">Warranty</span>
+          </div>
+          <button class="btn btn-primary">Discover Our Process</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. News & Highlights -->
+    <section class="section light" id="news">
+      <div class="container">
+        <div class="section-title">
+          <h2>News &amp; Highlights</h2>
+        </div>
+        <div class="grid cards-4 news-grid">
+          <div class="card news-card">
+            <img src="https://source.unsplash.com/900x600/?tire%20production%20line" alt="Factory update" />
+            <h3>New curing line boosts annual capacity</h3>
+            <p>Expanded production enhances supply reliability for dealers nationwide.</p>
+            <small>July 2024</small>
+            <a class="link" href="#">Read More →</a>
+          </div>
+          <div class="card news-card">
+            <img src="https://source.unsplash.com/900x600/?tire%20warehouse%20stacks" alt="Warehouse stacks" />
+            <h3>ZESS introduces high-mileage LCV range</h3>
+            <p>New tread compounds deliver longer service life for commercial fleets.</p>
+            <small>June 2024</small>
+            <a class="link" href="#">Read More →</a>
+          </div>
+          <div class="card news-card">
+            <img src="https://source.unsplash.com/900x600/?tire%20inspection" alt="Tyre inspection" />
+            <h3>Testing lab earns new certification</h3>
+            <p>Accreditation reinforces ZESS commitment to safety and quality.</p>
+            <small>May 2024</small>
+            <a class="link" href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. ZESS at a Glance -->
+    <section class="section dark" id="company">
+      <div class="container glance">
+        <h2>ZESS at a Glance</h2>
+        <div class="kpis">
+          <div class="kpi">
+            <h3>5000+</h3>
+            <p>Dealers</p>
+          </div>
+          <div class="kpi">
+            <h3>1000+</h3>
+            <p>Distributors</p>
+          </div>
+          <div class="kpi">
+            <h3>30+</h3>
+            <p>Years of Experience</p>
+          </div>
+          <div class="kpi">
+            <h3>Millions</h3>
+            <p>Tyres Produced Annually</p>
+          </div>
+        </div>
+        <div class="inline-links">
+          <a href="#company">About Us</a>
+          <a href="#quality">Quality &amp; Manufacturing</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Full Corporate Footer -->
+    <footer>
+      <div class="container footer-cols">
+        <div>
+          <h4>Find Your Tyre</h4>
+          <ul>
+            <li><a href="#">Motorcycle Tyres</a></li>
+            <li><a href="#">3-Wheeler &amp; EV Tyres</a></li>
+            <li><a href="#">LCV Tyres</a></li>
+            <li><a href="#">Farm/Tiller Tyres</a></li>
+            <li><a href="#">Inner Tubes</a></li>
+            <li><a href="#">Allied Products</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Tyre Care &amp; Safety</a></li>
+            <li><a href="#">Fitment &amp; Rotation</a></li>
+            <li><a href="#">Warranty &amp; Claims</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Download Centre</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Business</h4>
+          <ul>
+            <li><a href="#">For Fleets</a></li>
+            <li><a href="#">Become a Dealer</a></li>
+            <li><a href="#">Distributors &amp; Export</a></li>
+            <li><a href="#">OEMs</a></li>
+            <li><a href="#">B2B Portal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#company">About</a></li>
+            <li><a href="#quality">Quality &amp; Manufacturing</a></li>
+            <li><a href="#news">News &amp; Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© ZESS TYRE</span>
+        <span>Privacy Policy | Terms of Use | Cookie Policy</span>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
