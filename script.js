@@ -40,30 +40,4 @@
 
   forms.vehicle.addEventListener('submit', handleVehicleSubmit);
   forms.size.addEventListener('submit', handleSizeSubmit);
-
-  // Browse by Vehicle auto-slider
-  const track = document.querySelector('.vehicle-track');
-  const slides = track ? Array.from(track.children) : [];
-  let sliderIndex = 0;
-
-  function getStep() {
-    if (!slides.length) return 0;
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || '0');
-    return slideWidth + gap;
-  }
-
-  function goToSlide(index) {
-    if (!track || !slides.length) return;
-    const step = getStep();
-    track.style.transform = `translateX(${-step * index}px)`;
-  }
-
-  if (track && slides.length) {
-    setInterval(() => {
-      sliderIndex = (sliderIndex + 1) % slides.length;
-      goToSlide(sliderIndex);
-    }, 1000);
-    window.addEventListener('resize', () => goToSlide(sliderIndex));
-  }
 })();
