@@ -68,3 +68,9 @@ Use only realistic tyre-industry Unsplash photography with these search topics: 
 - Typography: headings bold geometric sans; body modern clean sans; buttons semi-bold (primary solid orange with white text, secondary bordered black/transparent).
 
 This single-scrolling page maintains the hierarchy: Hero with Tyre Finder → Browse by Vehicle → Product Range → Shop by Application → B2B Solutions → Dealer Network → Support → Quality → News → Stats → Footer. No extra sections or mid-page headers/footers.
+
+## GitHub Pages deployment
+A ready-to-use GitHub Actions workflow (`.github/workflows/deploy.yml`) builds a static snapshot of `index.php` and publishes it to GitHub Pages. To deploy on your `tonmoytirtho/auto-1001` repository:
+1. Push this code to the `main` (or `master`) branch of `tonmoytirtho/auto-1001`.
+2. In the repository Settings → Pages, select **GitHub Actions** as the source (the workflow will handle publishing to `gh-pages`).
+3. On each push to the default branch, the workflow runs `php index.php > dist/index.html`, uploads the artifact, and deploys it to `gh-pages`. The published URL is shown in the workflow summary.
